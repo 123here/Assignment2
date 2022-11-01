@@ -3,10 +3,10 @@ import java.util.HashMap;
 
 public class Database{
 
-    public String price(String userInput)
+    public String findPrice(String userInput)
     {
         // Hashmap is created to input database entries 
-      // Hashmap contains name of item and price
+        // Hashmap contains name of item and price
         HashMap<String, String> inventory;
         inventory = new HashMap<String, String>();
         inventory.put("apple", "$1");
@@ -20,7 +20,9 @@ public class Database{
             if (userInput.equals(i))
                 return inventory.get(userInput);
         }
+
         //if search is unsuccessful then it outputs a message saying that the product is not available
         return "PRODUCT NOT AVAILABLE";
     }
 }
+
